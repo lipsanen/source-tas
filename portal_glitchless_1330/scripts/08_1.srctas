@@ -1,0 +1,27 @@
+save 06_2
+demo 08_1
+playspeed 1
+settings tas_strafe_vectorial 1; tas_strafe_hull_is_line 1;_y_spt_anglesetspeed 2.5; tas_strafe_vectorial_snap 180
+
+vars
+var elevator_wait 837
+
+
+frames
+---------|------|------|0|-|1|_y_spt_afterframes_await_load
+---------|------|------|-|-|50|
+s03l-----|------|------|0|-|170|
+s03l-----|------|------|20|-|80|
+s03l-----|------|------|20|-|1|tas_strafe_vectorial_increment 0;_y_spt_setangles -1 -3
+---------|---b--|------|-|-|3|
+---------|------|------|-|-|16|
+---------|------|---1--|-|-|1|tas_strafe_vectorial_increment 2.5
+---------|------|------|90|-|17|
+s03------|------|------|90|-|42|
+s03------|------|-d----|-5|-|5|tas_strafe_vectorial_increment 3
+s03-j----|------|-d----|0|-|50|
+s03l-----|------|------|5|-|40|
+s03l-----|------|------|0|-|65|
+---------|------|------|180|-|80|
+---------|---b--|------|180|10|[elevator_wait]|
+---------|------|------|-|-|1|save 08_1

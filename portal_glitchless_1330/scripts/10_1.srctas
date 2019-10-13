@@ -1,0 +1,43 @@
+save 09_1
+demo 10_1
+playspeed 1
+settings tas_strafe_vectorial 1; tas_strafe_hull_is_line 1;_y_spt_anglesetspeed 2.5; tas_strafe_vectorial_snap 180
+
+vars
+var portal_wait 45
+var strafe_time 34
+var pitch 3.496
+var wait_before_jump 93
+var elevator_wait 841
+var duration 63
+var strafe_yaw 74
+var elevator_wait 832
+
+frames
+---------|------|------|0|-|1|_y_spt_afterframes_await_load
+---------|------|------|-|-|50|
+s03l-----|------|------|0|-|150|
+s03------|------|------|-90|25|40|
+---------|---b--|---1--|-|-|20|
+---------|------|------|-|[pitch]|[portal_wait]|
+s03------|------|------|-90|-|[strafe_time]|
+---------|---b--|---1--|-|-|3|tas_strafe_vectorial_offset 180; _y_spt_anglesetspeed 5
+---------|------|------|-|-80|16|
+s03------|------|------|180|-|20|
+---------|f-----|-d----|0|-|1|tas_strafe_vectorial_offset 0
+s03l-----|------|------|0|-|50|
+s03l-----|------|------|0|-89|83|
+s03------|------|------|-30|80|61|tas_strafe_vectorial_increment 2.5
+---------|------|------|[strafe_yaw]|-|88|
+----j----|------|------|-|-|1|
+s03------|------|-d----|[strafe_yaw]|-|10|
+---------|------|-d----|-|-|40|
+s03------|------|-d----|0|-|23|
+s03l-----|------|-d-1--|0|-|1|_y_spt_anglesetspeed 360; _y_spt_setangles -64.2 180; 
+s03l-----|------|-d----|0|-|1|_y_spt_setangles 80 0; tas_strafe_vectorial_increment 2.5
+s03------|------|-d----|0|-|40|
+s03------|------|-d----|0|10|60|_y_spt_anglesetspeed 2.5
+s03l-----|------|------|0|-|130|
+---------|------|------|180|10|80|
+---------|---b--|------|180|10|[elevator_wait]|
+---------|------|------|180|10|1|save 10_1

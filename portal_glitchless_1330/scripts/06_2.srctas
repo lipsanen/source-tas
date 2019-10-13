@@ -1,0 +1,26 @@
+save 06_1
+demo 06_2
+playspeed 1
+settings tas_strafe_vectorial 1; tas_strafe_hull_is_line 1;_y_spt_anglesetspeed 2.5
+
+vars
+var strafe_mid 19
+var ang -23.525
+var elevator_wait 837
+
+frames
+---------|------|------|-|-|15|
+s03l-----|------|------|180|-|70|
+s03------|------|------|180|45|[strafe_mid]|
+s03l-----|------|------|180|-|10|
+s03l-----|------|-d----|180|-|29|tas_strafe_vectorial_increment 0; _y_spt_setangles 89 [ang]; _y_spt_anglesetspeed 5
+s03l-----|------|-d----|180|-|33|
+s03l-----|------|-d-1--|180|-|4|
+---------|------|-d-1--|180|-|3|
+s03------|------|-d----|165|5|70|tas_strafe_vectorial_increment 2.5
+---------|------|-d----|-|-|0|toggle_duck
+s03l-----|------|------|165|-|70|
+s03l-----|------|------|180|-|80|
+---------|------|------|0|-|80|
+---------|---b--|------|0|-|[elevator_wait]|
+---------|------|------|-|-|0|save 06_2

@@ -1,0 +1,31 @@
+save 13_1
+demo 14_1
+playspeed 1
+settings tas_strafe_vectorial 1; tas_strafe_hull_is_line 1;_y_spt_anglesetspeed 2.5; tas_strafe_vectorial_snap 180; sv_player_funnel_into_portals 0
+
+vars
+var angle -21.8
+var portal_through_time 20
+var elevator_wait 869
+var angle 17.35
+var angle2 12.83
+
+frames
+---------|------|------|-|-|1|_y_spt_afterframes_await_load 
+---------|------|------|-|[angle]|26|
+s03------|------|------|180|-|40|
+s03------|------|---1--|180|-|1|
+s03------|------|------|180|[angle2]|15|tas_strafe_vectorial_increment 0
+s03l-----|------|-d----|180|-|1|
+s03------|------|-d----|180|-|17|_y_spt_setyaw -171
+s03------|------|-d--2-|180|-|1|
+s03l-----|------|-d----|180|-|33|tas_strafe_vectorial_increment 2.5
+s03l-----|------|-d-1--|180|-89|1|_y_spt_anglesetspeed 360; tas_strafe_vectorial_increment 0; _y_spt_setangles 6 -160
+s03l-----|------|-d----|180|-|1|_y_spt_setangles 89 0
+s03l-----|------|-d----|180|-|3|
+s03------|------|-d----|-177|10|37|_y_spt_anglesetspeed 5
+s03------|------|-d----|175.5|10|62|tas_strafe_vectorial_increment 2.5
+s03l-----|------|------|180|10|50|
+---------|------|------|0|10|50|
+---------|---b--|------|0|10|855|
+---------|------|------|-|-|1|save 14_1

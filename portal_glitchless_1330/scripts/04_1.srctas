@@ -1,0 +1,27 @@
+save 02_2
+demo 04_1
+//search low
+playspeed 1
+settings tas_strafe_vectorial 1; tas_strafe_hull_is_line 1;_y_spt_anglesetspeed 5
+
+vars
+var start_wait 50
+var elevator_wait 900
+
+
+frames
+---------|------|------|-|-|1|_y_spt_afterframes_await_load
+---------|------|------|-|-|[start_wait]|
+s03l-----|------|------|0|-|185|
+s03l-----|------|------|-90|-|20|
+s03------|------|------|-90|-10|5|
+s03------|------|------|8|-|25|
+s03l-----|------|------|8|-|45|
+s03l-----|------|------|8|-|15|_y_spt_setangles 66.5 -29; tas_strafe_vectorial_increment 0
+s03l-----|------|---1--|-|-|1|
+s03l-----|------|------|8|10|85|tas_strafe_vectorial_increment 2.5
+s03l-----|------|------|0|10|180|
+---------|------|------|180|-|50|
+---------|---b--|------|180|-|[elevator_wait]|
+---------|------|------|-|-|1|save 04_1; echo #SAVE#
+---------|------|------|-|-|1|stop

@@ -1,0 +1,30 @@
+save 00_3
+demo 02_1
+//search low
+//posy 293|350
+//tickend 0|3000
+
+playspeed 1
+settings tas_strafe_vectorial 1; tas_strafe_hull_is_line 1; _y_spt_anglesetspeed 2
+
+vars
+var wait 51
+var door_wait 1316
+var portal_wait 200
+var strafe_into_portal 42
+
+frames
+---------|------|------|-|-|1|_y_spt_afterframes_await_load
+---------|------|------|-|-|[wait]|
+s03l-----|------|------|180|-|110|
+s03------|------|------|90|-|50|
+---------|--r---|------|90|-|22|
+---------|------|------|-|-|[door_wait]|
+---------|------|------|-|-|0|tas_strafe_vectorial_increment 0
+s03------|------|------|90|-|60|
+s03------|------|------|180|-|92|
+---------|---b--|------|-|-|2|
+---------|------|------|-|-|[portal_wait]|
+---------|------|------|-|-|0|save 02_1; echo #SAVE#
+---------|------|------|-|-|100|
+---------|------|------|-|-|0|stop
