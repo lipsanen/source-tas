@@ -1,0 +1,23 @@
+demo 039-tcp11
+save 038-012
+
+playspeed 1
+
+settings tas_strafe_vectorial 1; tas_strafe_vectorial_increment 5;y_spt_hud_velocity 1;y_spt_hud_script_progress 1;y_spt_timer_reset;y_spt_timer_start;cl_showpos 1;bind p tas_script_result_stop 
+
+frames
+//sXXljdbcgu|flrbud|jdu12rws|yaw|pitch|length|console commands
+
+----------|------|--------|-|-|0|alias st0p "echo #SAVE#;wait 100;stop;toggleconsole"
+s01-------|------|--------|90|-|6|_y_spt_pitchspeed -3.7
+s01-------|------|--u-----|90|-|1|
+----------|------|--------|-|-|15|_y_spt_yawspeed 1
+----------|------|--------|-|-|15|_y_spt_pitchspeed 0
+----------|------|--------|-|-|30|_y_spt_yawspeed 0
+----------|------|--u-----|-|-|21|
+s01-------|------|-d-----s|55|-|12|
+s01-------|------|-d-----s|90|-|15|
+s01-j-----|------|-d------|90|-|15|
+
+----------|------|--------|-|-|0|_y_spt_yawspeed 0;_y_spt_pitchspeed 0
+----------|------|--------|-|-|0|//pause//save 039-tcp11;st0p

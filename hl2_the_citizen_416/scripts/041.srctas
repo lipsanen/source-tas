@@ -1,0 +1,21 @@
+demo 041-tcp12
+save 040-tcp12-405t
+
+playspeed 1
+
+
+settings tas_strafe_vectorial 1; tas_strafe_vectorial_increment 5;y_spt_hud_velocity 1;y_spt_hud_script_progress 1;y_spt_timer_reset;y_spt_timer_start;cl_showpos 1;bind p tas_script_result_stop 
+
+frames
+//sXXljdbcgu|flrbud|jdu12rws|yaw|pitch|length|console commands
+
+----------|------|--------|-|-|0|alias st0p "echo #SAVE#;wait 100;stop;toggleconsole"
+----------|-l----|-d------|0|-|60|
+----------|-l----|-d------|0|-|20|_y_spt_yawspeed -1
+----------|------|--------|0|-|10|_y_spt_yawspeed -4.75
+----------|------|--u----|-|10|1|
+----------|------|--------|-|-|8|
+----------|------|--u-----|-|-|1|
+
+----------|------|--------|-|-|0|_y_spt_yawspeed 0;_y_spt_pitchspeed 0
+----------|------|--------|-|-|0|pause//save 041-tcp12;st0p

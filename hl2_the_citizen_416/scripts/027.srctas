@@ -1,0 +1,30 @@
+demo 027-tcp10
+save 026-tcp9-33t
+playspeed 1 
+
+settings tas_strafe_vectorial 1; tas_strafe_vectorial_increment 5;y_spt_hud_velocity 1;y_spt_hud_script_progress 1;y_spt_timer_reset;y_spt_timer_start
+
+vars
+var a1 0.127904
+var a2 -1.75
+
+frames
+//sXXljdbcgu|flrbud|jdu12rws|yaw|pitch|length|console commands
+
+----------|------|--------|-|-|0|alias st0p "echo #SAVE#;wait 100;stop;toggleconsole"
+s01-------|------|--------|90|0|26|
+s01-------|------|-------s|-90|-|25|tas_strafe_vectorial_offset 180
+----------|------|-d-----s|90|-|13|
+s01-------|------|-d-----s|90|-|14|tas_strafe_vectorial_offset 0
+s01-j-----|------|-d------|90|-|20|
+s01-------|------|--------|86|-|35|
+s01-------|------|-------s|86|-|20|
+s01-------|------|-d------|89|-|10|
+----------|-l----|-d------|-|-|10|_y_spt_yawspeed [a1]
+----------|---b--|-d------|90|-|16|_y_spt_yawspeed 0;_y_spt_pitchspeed 0.25
+s01-------|------|-d------|130|-|40|incrementvar tas_strafe_vectorial_offset -180 180 [a2]
+s01-------|------|-d------|180|-|1|incrementvar tas_strafe_vectorial_offset -180 180 -50
+s01-------|------|-d------|180|-|15|incrementvar tas_strafe_vectorial_offset -180 180 [a2]
+
+----------|------|--------|-|-|0|_y_spt_yawspeed 0;_y_spt_pitchspeed 0
+----------|------|--------|-|-|0|save 027-tcp10;st0p

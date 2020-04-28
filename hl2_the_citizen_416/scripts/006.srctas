@@ -1,0 +1,23 @@
+demo 006-tcp1
+save 005-tcp1
+playspeed 1 
+
+settings tas_strafe_vectorial 1; tas_strafe_vectorial_increment 5;y_spt_hud_velocity 1;y_spt_hud_script_progress 1;y_spt_timer_reset;y_spt_timer_start
+
+frames
+//sXXljdbcgu|flrbud|jdu12rws|yaw|pitch|length|console commands
+
+----------|------|--------|-|-|0|alias st0p "echo #SAVE#;wait 100;stop;toggleconsole"
+s01-------|------|-d------|-90|-|19|
+----------|------|--------|-|-|0|fadein 0
+s01-------|------|-------|-90|-|1|
+----------|------|--u----|-90|-|50|
+s01-------|------|-d-----|-90|-|23|
+s01-------|------|-d-----|180|-|4|
+s01-j-----|------|-d-----|180|-|78|
+s01-------|------|-d-----|90|-|20|
+----------|f-r---|-------|90|-|20|
+----------|--r---|--u----|90|-|19|_y_spt_yawspeed 5
+
+----------|------|--------|-|-|0|_y_spt_yawspeed 0;_y_spt_pitchspeed 0
+----------|------|--------|-|-|0|pause//save 006-tcp1;st0p

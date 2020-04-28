@@ -1,0 +1,37 @@
+demo 054-tcp16
+save ;map thecitizen_part16
+
+playspeed 1
+
+settings tas_strafe_vectorial 1; tas_strafe_vectorial_increment 5;y_spt_hud_velocity 1;y_spt_hud_script_progress 1;y_spt_timer_reset;y_spt_timer_start;cl_showpos 1;bind p tas_script_result_stop 
+
+frames
+//sXXljdbcgu|flrbud|jdu12rws|yaw|pitch|length|console commands
+
+----------|------|--------|-|-|0|alias st0p "echo #SAVE#;wait 100;stop;toggleconsole"
+----------|------|--------|-|-|200|
+----------|f-----|--------|-|-|145|
+----------|------|--------|-|-|45|_y_spt_yawspeed 2
+----------|f-----|--------|-|-|50|_y_spt_yawspeed 0
+----------|------|--------|-|-|100|
+----------|---b--|--------|-|-|50|
+----------|------|--------|-|-|45|_y_spt_yawspeed 2
+----------|f-----|--------|-|-|145|_y_spt_yawspeed 0
+----------|------|--------|-|-|75|_y_spt_yawspeed -1
+s01-------|------|-d------|-165|-|27|
+s01-j-----|------|-d------|-180|-|50|
+s01-j-----|------|--------|89|-|90|
+----------|------|--------|-|-|45|_y_spt_yawspeed -4
+----------|------|--------|-|-|50|_y_spt_yawspeed 0
+s01-------|------|-d------|-91|-|27|
+s01-j-----|------|-d------|-91|-|65|
+s01-j-----|------|-d------|0|-|50|
+s01-j-----|------|-d------|-16|-|14|
+s01-j-----|------|--------|-|-|20|
+----------|------|--------|-|-|100|_y_spt_yawspeed 2.7
+----------|--rb--|--------|-90|-|22|_y_spt_yawspeed 0
+----------|------|--------|-|-|500|
+----------|------|--------|-|-|90|_y_spt_yawspeed 2;_y_spt_pitchspeed -0.2
+
+----------|------|--------|-|-|0|_y_spt_yawspeed 0;_y_spt_pitchspeed 0
+//----------|------|--------|-|-|0|pause
