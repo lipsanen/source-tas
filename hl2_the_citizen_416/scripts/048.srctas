@@ -1,0 +1,24 @@
+demo 048-tcp14
+save 047-tcp13-62t
+
+playspeed 1
+
+settings tas_strafe_vectorial 1; tas_strafe_vectorial_increment 5;y_spt_hud_velocity 1;y_spt_hud_script_progress 1;y_spt_timer_reset;y_spt_timer_start;cl_showpos 1;bind p tas_script_result_stop 
+
+frames
+//sXXljdbcgu|flrbud|jdu12rws|yaw|pitch|length|console commands
+
+----------|------|--------|-|-|0|alias st0p "echo #SAVE#;wait 100;stop;toggleconsole"
+s01-j-----|------|-d------|-5|-|60|use weapon_frag
+s01-j-----|------|-d------|90|-|15|
+s01-j-----|------|-d-1----|-130|-|40|
+s01-j-----|------|-d-1----|10|-|30|
+----------|------|-d------|30|-|1|
+s01-j-----|------|-d------|0|-|37|
+s01-j-----|------|-du-----|0|-|15|tas_strafe_vectorial_offset -90
+s01-j-----|------|--------|90|-|10|tas_strafe_vectorial_offset 180
+----------|-l----|--------|-|-|20|_y_spt_yawspeed -9
+----------|--r---|--------|-|-|15|_y_spt_yawspeed 0
+
+----------|------|--------|-|-|0|_y_spt_yawspeed 0;_y_spt_pitchspeed 0
+----------|------|--------|-|-|0|save 048-tcp14;st0p

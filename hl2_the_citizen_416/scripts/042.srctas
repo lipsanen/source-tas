@@ -1,0 +1,26 @@
+demo 042-tcp12
+save 041-tcp12-98t
+
+playspeed 10000
+
+search random
+
+tick 149|150
+
+velz 2000|3000
+
+settings tas_strafe_vectorial 1; tas_strafe_vectorial_increment 5;y_spt_hud_velocity 1;y_spt_hud_script_progress 1;y_spt_timer_reset;y_spt_timer_start;cl_showpos 1;bind p tas_script_result_stop 
+
+vars
+float p -2|2|0.001
+float y 0|4|0.001
+
+frames
+//sXXljdbcgu|flrbud|jdu12rws|yaw|pitch|length|console commands
+
+----------|------|--------|-|-|0|alias st0p "echo #SAVE#;wait 100;stop;toggleconsole";y_spt_stucksave "save 042-tcp12;tas_script_result_stop;st0p"
+----------|f-----|-d------|-|-|5|_y_spt_pitchspeed [p];_y_spt_yawspeed [y]
+----------|f-----|-d------|-|-|150|_y_spt_yawspeed 0;_y_spt_pitchspeed 0
+
+----------|------|--------|-|-|0|_y_spt_yawspeed 0;_y_spt_pitchspeed 0
+//----------|------|--------|-|-|0|save 041-tcp12;st0p

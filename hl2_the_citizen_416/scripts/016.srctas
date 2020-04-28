@@ -1,0 +1,31 @@
+demo 016-tcp4
+save 015-tcp4-18t
+playspeed 1 
+
+settings tas_strafe_vectorial 1; tas_strafe_vectorial_increment 5;y_spt_hud_velocity 1;y_spt_hud_script_progress 1;y_spt_timer_reset;y_spt_timer_start
+
+vars
+var d1 50//[d1]
+
+frames
+//sXXljdbcgu|flrbud|jdu12rws|yaw|pitch|length|console commands
+
+----------|------|--------|-|-|0|alias st0p "echo #SAVE#;wait 100;stop;toggleconsole"
+----------|-l----|--------|0|-|19|_y_spt_yawspeed -6;_y_spt_pitchspeed -2
+----------|------|-d-----s|-90|-|8|_y_spt_yawspeed 0;_y_spt_pitchspeed 0
+s01-------|------|-d-----s|-90|-|9|
+s01-------|------|-d-----s|-180|-|10|
+s01-j-----|------|-d------|170|-|30|
+s01-j-----|------|-d------|90|-|40|
+s01-j-----|------|------w-|90|-|30|
+s01-j-----|------|------w-|110|-|2|
+s01-j-----|------|--------|110|-|15|
+s01-j-----|------|-------s|-150|-|25|
+s01-j-----|------|-d------|150|-|10|
+s01-j-----|------|-d------|[d1]|-|10|
+s01-j-----|------|--------|[d1]|-|20|
+s01-j-----|------|-------s|[d1]|-|82|
+s01-j-----|------|-------s|180|-|100|
+
+----------|------|--------|-|-|0|_y_spt_yawspeed 0;_y_spt_pitchspeed 0
+----------|------|--------|-|-|0|pause//save 016-tcp4;st0p
