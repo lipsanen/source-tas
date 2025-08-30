@@ -1,0 +1,17 @@
+demoactions
+{
+	"1"
+	{
+		factory "PlayCommands"
+		name "start"
+		starttick "222"
+		commands "y_spt_cam_control 2; cl_drawhud 0;"
+	}
+	"2"
+	{
+		factory "PlayCommands"
+		name "end"
+		starttick "806"
+		commands "y_spt_cam_control 0; cl_drawhud 1;"
+	}
+}

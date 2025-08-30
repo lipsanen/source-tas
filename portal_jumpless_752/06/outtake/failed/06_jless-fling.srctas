@@ -1,0 +1,78 @@
+save 06_tas
+demo 06_jless
+playspeed 1
+settings tas_strafe_vectorial 1; tas_strafe_dir 3; speedrun_stop; tas_strafe_afh 1; tas_strafe_version 5; tas_pause 0; tas_strafe_allow_jump_override 1;
+settings y_spt_set_ivp_seed_on_load 1;
+
+// checkpoint.cfg
+//ent_create point_servercommand;
+
+//ent_keyvalue 18755 targetname open_portal_trig
+//ent_fire open_portal_trig addoutput "OnTrigger point_servercommand,Command,echo #06_portal#";server_game_time
+
+//ent_fire a03-middle_trigger_elevator_move addoutput "OnTrigger point_servercommand,Command,server_game_time;echo #06_ele#";
+
+//ent_keyvalue 390575 targetname 07_portal_trigger
+//ent_fire 07_portal_trigger addoutput "OnTrigger point_servercommand,Command,echo #07_portal#";server_game_time
+
+//ent_fire a03-a04_trigger_elevator_move addoutput "OnTrigger point_servercommand,Command,server_game_time;echo #07_ele#";
+
+vars
+var end cl_mouseenable 1; tas_aim_reset; spt_cvar fps_max 66.6667; mat_norendering 0; tas_pause 0;
+
+frames
+//sXXljdbcgu|flrbud|jdu12r|yaw|pitch|tick|
+----------|------|------|-|-|1|cl_mouseenable 0;
+----------|------|------|-|-|2|
+----------|------|------|-|-|1|spt_afterframes_await_load;
+----------|------|------|-|-|45|
+----------|------|------|-|-|0|exec checkpoint
+
+----------|------|------|-|-|0|tas_aim 20 -90 10;
+s30-------|------|------|90|-|8|
+s00-------|------|------|0|-|30|
+----------|------|------|-|-|0|tas_aim 20 0 6;
+s00-------|------|------|-|-|12|
+----------|------|------|-|-|0|tas_aim 80 0 1;
+s00-------|------|------|-|-|40|
+----------|------|------|-|-|0|tas_aim 5 0 10;
+s00-------|------|------|-|-|60|
+s00-------|------|-d----|-|-|60|
+
+// line up
+----------|fl----|------|-|-|30|
+----------|f-----|------|-|-|180|
+----------|------|------|-|-|1|tas_aim 0 180 180;
+----------|------|------|-|-|800|
+
+// 07
+----------|------|------|-|-|28|
+----------|------|------|-|-|0|tas_aim 10 167 50;
+s00-------|------|------|180|-|50|
+s00-------|------|---1--|-|-|1|
+s00-------|------|------|180|-|50|
+s30-------|------|------|90|-|5|
+----------|------|------|-|-|0|tas_aim -7.6 -150 30;
+----------|------|------|-|-|46|
+s30-------|------|-d----|-|-|2|
+s30-------|------|-d-1--|-|-|1|
+s30-------|------|-d----|-|-|8|
+s30-------|------|------|-|-|6|
+
+----------|------|------|-|-|0|tas_aim 89 -105 30;
+s00-------|------|------|90|-|20|
+s00-------|------|-d----|-|-|39|
+s00-------|------|-d-1--|-|-|1|
+----------|------|-d----|-|-|4|
+----------|------|------|-|-|0|tas_aim 0 170 30;
+// airlock
+----------|------|-d----|-|-|64|
+
+s00-------|------|-d----|180|-|40|
+s00-------|------|------|-|-|90|
+
+----------|------|------|-|-|0|tas_aim 0 0 30;
+----------|------|------|-|-|30|
+----------|---b--|------|-|-|200|
+
+----------|------|------|-|-|1|[end];

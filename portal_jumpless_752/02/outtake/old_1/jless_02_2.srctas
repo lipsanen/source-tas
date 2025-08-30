@@ -1,0 +1,21 @@
+save 02_jless_vag
+demo 02_jless_1
+playspeed 1
+settings tas_strafe_vectorial 1; tas_strafe_dir 3; tas_strafe_afh 1; tas_strafe_version 6; tas_strafe_allow_jump_override 1; tas_pause 0;
+settings y_spt_set_ivp_seed_on_load 1;
+
+vars
+var vag_yaw 151.97
+
+frames
+//sXXljdbcgu|flrbud|jdu12rws|yaw|pitch|tick|
+----------|------|--------|-|-|1|cl_mouseenable 0; _y_spt_afterframes_await_load; 
+
+// z: 301.968750
+----------|------|--------|-|-|0|tas_aim -60 [vag_yaw] 1; ent_bbox player;
+
+----------|f-----|--------|-|-|8|
+----------|f-----|--------|-|-|1|
+----------|------|--------|-|-|0|tas_aim_reset;
+----------|f-----|--------|-|-|14|
+----------|------|--------|-|-|1|cl_mouseenable 1; tas_aim_reset; y_spt_cvar fps_max 66.6667; // tas_pause 1;
