@@ -1,0 +1,40 @@
+save 00_tas_2
+demo 00_jless_3
+playspeed 1
+settings tas_strafe_vectorial 1; tas_strafe_dir 3; speedrun_stop; tas_strafe_afh 1; tas_strafe_version 5; tas_pause 0; tas_strafe_allow_jump_override 1;
+settings spt_set_ivp_seed_on_load 12121;
+
+//settings mat_norendering 1;
+
+vars
+var end cl_mouseenable 1; spt_cvar fps_max 66.6667; tas_aim_reset; mat_norendering 0; tas_pause 0;
+
+frames
+//sXXljdbcgu|flrbud|jdu12r|yaw|pitch|tick|
+----------|------|------|-|-|1|cl_mouseenable 0; spt_afterframes_await_load; //spt_cvar fps_max 0;
+
+----------|------|------|-|-|0|tas_aim 30 -90 40; ent_text; ent_bbox player;
+----------|------|------|-|-|38|
+----------|------|------|-|-|0|tas_aim_reset;
+s00-------|------|------|-90|-|35|
+s00-------|------|------|-3.4|-|120|
+----------|------|------|-|-|0|tas_aim 60 10 20;
+s00-------|------|------|7|-|5|
+s00-------|------|-d----|-|-|20|
+----------|------|------|-|-|0|tas_aim 60 0.35 4;
+s00-------|------|-d----|-|-|5|
+----------|------|------|-|-|1|
+----------|f-----|------|-|-|9|
+----------|---b--|------|-|-|4|
+----------|------|------|-|-|0|tas_aim 0 0 10;
+----------|f-----|------|-|-|3|
+
+s00-------|------|------|0|-|120|
+
+----------|------|------|-|-|0|tas_aim 0 180 30;
+----------|------|------|-|-|30|
+----------|---b--|------|-|-|120|
+
+----------|------|------|-|-|750|
+
+----------|------|------|-|-|1|[end]; // save 02_tas;

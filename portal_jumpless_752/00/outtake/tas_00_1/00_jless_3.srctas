@@ -1,0 +1,43 @@
+save 00_tas_2
+demo 00_jless_3
+playspeed 1
+settings tas_strafe_vectorial 1; tas_strafe_dir 3; speedrun_stop; tas_strafe_afh 1; tas_strafe_version 5; tas_pause 0; tas_strafe_allow_jump_override 1;
+settings y_spt_set_ivp_seed_on_load 2;
+
+settings y_spt_set_all_sounds_available_after_load 1;
+settings y_spt_set_physics_hook_offset_on_load 0.015;
+
+//settings mat_norendering 1;
+search random
+
+vars
+var radio_id 297
+
+int speed 10|12|1
+float yaw 20|40|0.01
+float pitch1 0|40|0.01
+float pitch2 -30|-10|0.01
+
+//var speed 12
+//var yaw 33.31
+//var pitch1 29.4
+//var pitch2 -28.07
+
+frames
+//sXXljdbcgu|flrbud|jdu12r|yaw|pitch|tick|
+----------|------|------|-|-|1|cl_mouseenable 0;_y_spt_afterframes_await_load; //y_spt_cvar fps_max 0;
+
+----------|------|------|-|-|0|tas_aim 30 60 20;
+s30-------|------|------|-40|-|20|
+----------|------|------|-|-|0|tas_aim [pitch1] 120 20;
+s30-------|------|------|-20|-|20|
+s30-------|------|------|60|-|20|
+----------|------|------|-|-|0|tas_aim [pitch2] [yaw] [speed];
+----------|------|------|-|-|[speed]|
+----------|------|---1--|-|-|1|
+----------|------|-------|-|-|0|tas_aim_ent [radio_id] 10;
+s00-------|------|------|-110|-|40|
+//----------|------|------|-|-|40|
+//s00-------|------|------|90|-|20|
+
+----------|------|------|-|-|1|cl_mouseenable 1; y_spt_cvar fps_max 66.6667; tas_aim_reset; tas_pause 0; mat_norendering 0;

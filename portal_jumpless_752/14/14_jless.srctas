@@ -1,0 +1,46 @@
+save 14_tas
+demo 14_jless
+playspeed 1
+settings tas_strafe_vectorial 1; tas_strafe_dir 3; speedrun_stop; tas_strafe_afh 1; tas_strafe_version 5; tas_pause 0; tas_strafe_allow_jump_override 1;
+settings y_spt_set_ivp_seed_on_load 1;
+
+//search random
+//velx -3500|-900
+//velz 300|800
+//tickend 0|60
+
+vars
+var start cl_mouseenable 0; spt_afterframes_await_load; // mat_norendering 1; spt_cvar fps_max 0;
+var end cl_mouseenable 1; tas_aim_reset; y_spt_cvar fps_max 66.6667; mat_norendering 0; tas_pause 0;
+
+int ang_speed 10|40|1
+float slide_dir 177|183|0.01
+float slide_pitch 80|89|0.01
+float slide_yaw 175|185|0.01
+
+var ang_speed 22
+var slide_dir 177.9
+var slide_pitch 80.49
+var slide_yaw 175.62
+
+frames
+//sXXljdbcgu|flrbud|jdu12r|yaw|pitch|tick|
+----------|------|------|-|-|1|[start];
+----------|------|------|-|-|1|
+----------|------|------|-|-|1|spt_afterframes_await_load;
+----------|------|------|-|-|1|
+----------|------|------|-|-|0|tas_aim 20 180 6;
+s00-------|------|------|180|-|18|
+----------|------|------|[slide_dir]|-|0|tas_aim [slide_pitch] [slide_yaw] [ang_speed];
+s00-------|------|------|-|-|33|
+----------|------|------|-|-|0|tas_aim 4 180 13;
+s00-------|------|-d----|180|-|90|
+
+
+// line up
+----------|fl----|------|-|-|30|
+----------|f-----|------|-|-|180|
+----------|------|------|-|-|1|tas_aim 0 0 180;
+----------|------|------|-|-|180|
+
+----------|------|------|-|-|1|[end];
